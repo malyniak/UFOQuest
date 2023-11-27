@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Вова
-  Date: 23.11.2023
-  Time: 20:52
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="static text.TextContent.ACCEPT_UP" %>
@@ -15,7 +8,8 @@
     <title>Quiz</title>
 </head>
 <body>
-<div><%=UP_ON_BRIDGE%></div>
+<div><%=UP_ON_BRIDGE%>
+</div>
 <form method="post" action="/captain">
     <label>
         <input type="radio" name="answer" value="accept"> <%=ACCEPT_UP%>
@@ -25,7 +19,8 @@
         <input type="radio" name="answer" value="reject"> <%=REJECT_UP%>
     </label>
     <br>
-    <button type="submit"><%=SEND%></button>
+    <button type="submit"><%=SEND%>
+    </button>
 </form>
 </body>
 </html>
