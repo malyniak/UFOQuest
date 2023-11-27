@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="static text.TextContent.*" %>
 <html>
@@ -6,7 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<div><%=LOSE%></div>
-<button type="submit" value="<%=RESTART%>"></button>
+<div><%=LOSE%>
+</div>
+<button type="button" onclick="restart()" value="<%=RESTART%>" >Restart</button>
+<script>
+    function restart() {
+        window.location.href = "/start.jsp";
+    }
+</script>
 </body>
 </html>

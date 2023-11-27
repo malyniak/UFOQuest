@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @WebServlet("/captain")
 public class CaptainBridgeServlet extends HttpServlet {
-    CaptainBridgeService captainBridgeService=CaptainBridgeService.getInstance();
+    CaptainBridgeService captainBridgeService=CaptainBridgeService.getService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String answer = request.getParameter("answer");
         captainBridgeService.checkAnswer(new Answer(answer));

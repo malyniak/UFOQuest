@@ -5,20 +5,18 @@ public class WinService extends Service{
     private static final WinService service=new WinService();
     private WinService() {}
 
-    @Override
     public void checkAnswer(Answer answer) {
 
     }
-
     public Service getNextStep() {
-        return StartService.getStartService();
+        return StartService.getService();
     }
     @Override
     public String getUrl() {
         return url;
     }
 
-    public static WinService getInstance() {
+    public static WinService getService() {
         return service;
     }
 }

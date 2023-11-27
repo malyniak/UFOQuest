@@ -5,24 +5,26 @@ public class IntroduceYourselfService extends Service {
     private String url = "/introduce.jsp";
     private Service nextStep;
 
-    @Override
     public Service getNextStep() {
         return nextStep;
     }
-    private IntroduceYourselfService() {}
-    @Override
+
+    private IntroduceYourselfService() {
+    }
+
     public String getUrl() {
         return url;
     }
 
-    public static IntroduceYourselfService getInstance() {
+    public static IntroduceYourselfService getService() {
         return service;
     }
+
     public void checkAnswer(Answer answer) {
-        if(answer.getText().equals("lie")) {
-            nextStep=EndQuestService.getInstance();
+        if (answer.getText().equals("lie")) {
+            nextStep = EndQuestService.getInstance();
         } else {
-            nextStep=WinService.getInstance();
+            nextStep = WinService.getService();
         }
 
     }

@@ -5,17 +5,12 @@ public class EndQuestService extends Service{
     private static final EndQuestService service=new EndQuestService();
     private EndQuestService() {}
 
-    @Override
     public void checkAnswer(Answer answer) {
-
     }
-
-    @Override
     public Service getNextStep() {
-        return StartService.getStartService();
+        return StartService.getService();
     }
 
-    @Override
     public String getUrl() {
         return url;
     }

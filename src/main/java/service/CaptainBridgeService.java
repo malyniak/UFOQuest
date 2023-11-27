@@ -6,14 +6,12 @@ public class CaptainBridgeService extends Service {
     private String url="/captain.jsp";
     private CaptainBridgeService() {
     }
-    public static CaptainBridgeService getInstance() {
+    public static CaptainBridgeService getService() {
         return service;
     }
-    @Override
     public Service getNextStep() {
         return nextStep;
     }
-
     public String getUrl() {
         return url;
     }
@@ -21,7 +19,7 @@ public class CaptainBridgeService extends Service {
         if(answer.getText().equals("reject")) {
             nextStep=EndQuestService.getInstance();
         } else {
-            nextStep=IntroduceYourselfService.getInstance();
+            nextStep=IntroduceYourselfService.getService();
         }
 
     }

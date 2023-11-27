@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @WebServlet("/introduce")
 public class IntroduceYourselfServlet extends HttpServlet {
-    IntroduceYourselfService service=IntroduceYourselfService.getInstance();
+    IntroduceYourselfService service=IntroduceYourselfService.getService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String answer = request.getParameter("answer");
         service.checkAnswer(new Answer(answer));
